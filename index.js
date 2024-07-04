@@ -90,7 +90,7 @@ app.get("/admissions", async (req, res) => {
 // API endpoint to fetch admissions data
 app.get("/api/admissions", async (req, res) => {
   try {
-    const result = await db.query("SELECT * FROM admission3");
+    const result = await db.query("SELECT * FROM admission");
     res.json(result.rows);
   } catch (err) {
     console.error("Error fetching admissions:", err);
