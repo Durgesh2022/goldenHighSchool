@@ -10,7 +10,7 @@ dotenv.config();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 const db = new pg.Client({
  connectionString: process.env.POSTGRES_URL,
