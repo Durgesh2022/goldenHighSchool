@@ -1,0 +1,703 @@
+/* Main CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    z-index: 1;
+}
+
+.logo-img {
+    margin-right: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.school-name {
+    font-size: 3.2em;
+    color: #090808;
+    margin: 0;
+    font-family: "Copperplate", Fantasy;
+}
+
+.wrapper {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper .menu-btn {
+    position: absolute;
+    right: 10px;
+    bottom: -25px;
+    background: #018ffc;
+    color: black;
+    height: 45px;
+    width: 45px;
+    z-index: 9999;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#btn:checked ~ .menu-btn {
+    top: 10px;
+    right: 37px;
+    background: #12cdd4;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.wrapper .menu-btn i {
+    position: absolute;
+    font-size: 23px;
+    transition: all 0.3s ease;
+}
+
+.wrapper .menu-btn i.fa-times {
+    opacity: 0;
+}
+
+#btn:checked ~ .menu-btn i.fa-times {
+    opacity: 1;
+    transform: rotate(-180deg);
+}
+
+#btn:checked ~ .menu-btn i.fa-bars {
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+#sidebar {
+    position: fixed;
+    background: #12cdd4;
+    height: 490px;
+    width: 600px;
+    overflow: hidden;
+    right: -600px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+}
+
+#btn:checked ~ #sidebar {
+    right: 0;
+}
+
+#sidebar .logo {
+    line-height: 65px;
+    background: #018ffc;
+    padding: 10px;
+}
+
+#sidebar .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+#sidebar .list-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar .left-section{
+    width: 70%;
+    height: 100%;  
+}
+ #sidebar .right-section {
+    width: 30%;
+    height: 100%;
+}
+
+#sidebar .left-section .list-items li{
+    background: #018ffc;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #018ffc;
+    transition: all 0.3s ease;
+} 
+#sidebar .right-section .list-items li {
+    background: #018ffc;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid  #12cdd4;
+    transition: all 0.3s ease;
+}
+
+#sidebar .right-section .list-items li {
+    background: #12cdd4;
+}
+
+#sidebar .list-items li:hover {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0px 10px 3px #222;
+}
+
+#sidebar .left-section .list-items li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 15px 20px;
+} 
+#sidebar .right-section .list-items {
+    position: absolute; /* Positioned absolute */
+    bottom: 0; /* Aligned to the bottom */
+    width: 100%; /* Full width */
+  }
+#sidebar .right-section .list-items li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 15px 20px;
+    
+}
+
+
+.banner {
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: 100%; /* Ensure the banner takes the full width */
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+    padding: 10px 20px;
+    font-family:Cursive;
+    font-style:italic;
+    font-size: 4.2em;
+}
+
+.form_h{
+    height: 10px;
+    
+}
+
+
+.form-section {
+    padding: 20px;
+    background-color:#cce0ff;
+    text-align: center;
+    height: 600px;
+}
+
+.form-heading {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-heading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFD700; /* Yellow color */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.form-section p {
+    margin-bottom: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group-gender input[type="radio"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    width:20rem;
+    position:relative;
+    left:20rem;
+}
+.male{
+position:relative;
+right:0.63rem;
+}
+.gender{
+   position:relative;
+  right:2rem;
+}
+.submit{
+position:relative;
+top:5rem;
+right:0px;
+}
+.form-group-gender{
+position:relative;
+right:22rem;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="tel"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group input[type="date"]::placeholder,
+.form-group input[type="number"]::placeholder {
+    color: #999;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    position:realtive;
+    top:4rem;
+    
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.footer {
+    
+    background-color: #1E90FF; /* DodgerBlue background */
+    color: #6A0DAD; /* Purple text */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 0; /* Ensure footer is behind other content */
+    clear: both; /* Clear floats */
+
+}
+.f{
+
+    background-color: #1E90FF; /* DodgerBlue background */
+    color: #6A0DAD; /* Purple text */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 0; /* Ensure footer is behind other content */
+    clear: both; /* Clear floats */
+}
+.footer1 {
+    text-align: center;
+    padding: 0px;
+    position: relative;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    height: 100px;
+   
+    
+}
+.footer1 img {
+    display: block;
+    margin: 0 auto;
+    width: 100px; /* Adjust size as per your requirement */
+    top: 690px;
+    position: relative;
+    z-index: 1; /* Ensure image is above background */
+    border-radius: 30px;
+}
+
+.f h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.f p {
+    margin: 5px 0;
+    font-family:Cursive;
+    font-style:italic;
+}
+.social-icons {
+    margin: 20px 0;
+}
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #6A0DAD;
+    font-size: 24px;
+}
+.footer-links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.footer-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #6A0DAD;
+}
+.footer-links b{
+font-weight:800;
+}
+.footer-bottom {
+    background-color: #6A0DAD; /* Purple background */
+    color: white;
+    padding: 2px;
+    margin-top: 0px;
+    font-size: 16px;
+    text-align: center; 
+}
+.footer-bottom span {
+    font-weight: bold;
+    display: inline-block;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+
+}
+.footer-bottom h2 {
+    font-family: 'Pacifico';
+    font-weight: 300;
+    font-size: 35px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: inline-block;
+}
+
+.powered-by a {
+    color: white;
+    text-decoration: none;
+}
+.powered-by p{
+    font-size: 12px;
+    margin-top: 10px;
+    background-color:#070b56 ; /* Purple background */
+    color: white;
+    padding: 0px;
+    display: inline-block;
+    border-radius:3px;
+}
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .logo-img {
+        width: 30px;
+        height: 22.5px;
+        margin-right: 10px;
+        border-radius:.5rem;
+    }
+
+    .school-name {
+        font-size: 1.5em;
+    }
+
+    .header-container {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 5px;
+    }
+    
+    .banner img {
+        height: auto; /* Adjust height for smaller screens */
+        width: 100%;
+    }
+    .banner-text {
+        font-size: 20px; /* Adjust text size for smaller screens */
+        padding: 5px 10px; /* Adjust padding for smaller screens */
+    }
+    .form-section {
+        padding: 5px;
+        background-color:#cce0ff;
+        text-align: center;
+        height: 500px;
+    }
+    
+    .form-heading {
+        display: inline-block;
+        position: relative;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .form-heading::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1.5px;
+        background-color: #FFD700; /* Yellow color */
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+    }
+    
+    .form-section p {
+        margin-bottom: 20px;
+        color: red;
+        font-weight: bold;
+    }
+    
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .form-group {
+        flex: 1 1 45%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group label {
+        margin-bottom: 0px;
+        font-weight: bold;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group input[type="date"],
+    .form-group input[type="number"],
+    .form-group-gender input[type="radio"] {
+        padding: 2px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        width:10rem;
+        position:relative;
+        left:3rem;
+    }
+    .male{
+    position:relative;
+    right:0.63rem;
+    }
+    .gender{
+       position:relative;
+      right:2rem;
+    }
+    .submit{
+    position:relative;
+    top:5rem;
+    right:0px;
+    }
+    .form-group-gender{
+    position:relative;
+    right:7rem;
+    }
+    
+    .form-group input[type="text"]::placeholder,
+    .form-group input[type="tel"]::placeholder,
+    .form-group input[type="email"]::placeholder,
+    .form-group input[type="date"]::placeholder,
+    .form-group input[type="number"]::placeholder {
+        color: #999;
+    }
+    
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        position:realtive;
+        top:4rem;
+        
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .footer1 img {
+        top: 560px;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .logo-img{
+        width: 25px;
+        height: 25px;
+    }
+    .school-name{
+        font-size: 1.2em;
+    }
+    .wrapper{
+        width: 30%;
+    }
+    .wrapper .menu-btn{
+        height: 20px;
+        width: 20px;
+        bottom: -20px;
+        
+    }
+    .wrapper .menu-btn i{
+        font-size: 10px;
+    }
+    #sidebar{
+        width: 370px;
+        height: 490px;
+    }
+    #sidebar .left-section .list-items li a {
+        font-size: 22px;
+    }
+    #sidebar .right-section .list-items li{
+        padding-left: 10px;
+    }
+    #sidebar .right-section .list-items li a{
+        font-size: 16px;
+    }
+    .form-section p {
+        margin-bottom: 25px;
+        color: red;
+        font-weight: bold;
+    }
+    
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    .form-group {
+        flex: 1 1 45%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group label {
+        margin-bottom: 0px;
+        font-weight: bold;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group input[type="date"],
+    .form-group input[type="number"],
+    .form-group-gender input[type="radio"] {
+        padding: 0px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        width:9rem;
+        position:relative;
+        left:1rem;
+    }
+    .male{
+    position:relative;
+    right:0.63rem;
+    }
+    .gender{
+       position:relative;
+      right:2rem;
+    }
+    .submit{
+    position:relative;
+    top:5rem;
+    right:0px;
+    }
+    .form-group-gender{
+    position:relative;
+    right:3.5rem;
+    }
+    
+    .form-group input[type="text"]::placeholder,
+    .form-group input[type="tel"]::placeholder,
+    .form-group input[type="email"]::placeholder,
+    .form-group input[type="date"]::placeholder,
+    .form-group input[type="number"]::placeholder {
+        color: #999;
+    }
+    
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        position:realtive;
+        top:2rem;
+        
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .footer1 img {
+        top: 540px;
+    }
+    .f h1 {
+        font-size: 1.2rem;
+       
+    }
+    .f p{
+        font-size: .6rem;
+    }
+    .social-icons a {
+        font-size: 12px;
+    }
+    .footer-links{
+        font-size: 10px;
+    }
+    .footer-links a{
+        margin: 0 2px;
+    }
+    .footer1 img{
+        width: 60px;
+        border-radius: 15px;
+    }
+}
+

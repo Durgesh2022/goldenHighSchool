@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Children High School - Admission Form</title>
+    <link rel="stylesheet" href="admission_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img class="logo-img" src="Logo.jpg"  alt="School Logo">
+            <h1 class="school-name" style="font-family:'Times New Roman', Times, serif;"><b>Good Children High School</b></h1>        
+          <div class="wrapper">
+            <input type="checkbox" id="btn" hidden />
+            <label for="btn" class="menu-btn">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-times"></i>
+            </label>
+            <nav id="sidebar">
+             
+              <div class="left-section">
+                <div class="logo">
+                  <img src="Logo.jpg" alt="Logo">
+                </div>
+                <ul class="list-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="StudentLife.html">Student Life</a></li>
+                </ul>
+              </div>
+              <div class="right-section">
+                <ul class="list-items">
+                    <li><a href="#">Quick links</a></li>
+                  <li><a href="#">Resources</a></li>
+                  <li><a href="#">Calendar</a></li>
+                  <li><a href="#">Location</a></li>
+                </ul>
+              </div>
+              
+            </nav>
+          </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <img src="admission_image.jpg" alt="Admissions Open">
+        <div class="banner-text">
+            <h3 style="font-family: 'Gravitas One';">Admissions Open</h3>
+        </div>
+    </section>
+<br>
+<br>
+<div class="form_h">
+    <h1 align="center">Online Admission Form</h1>
+    <hr style="width: 15%; height: 1px; background-color:#ffdb4d; align-items:center" class="hr">
+</div>
+
+<div class="footer1">
+    <img class="center" src="Logo.jpg" alt="School Logo">
+    <section class="form-section">
+        <p>Please fill in the required details as given below:</p>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="class">Class</label>
+                <input type="text" id="class" name="class" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="fathername">Father Name</label>
+                <input type="text" id="fathername" name="fathername" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="mothername">Mother Name</label>
+                <input type="text" id="mothername" name="mothername" required>
+            </div>
+            <div class="form-group">
+                <label for="aadhaarno">Aadhaar No</label>
+                <input type="text" id="aadhaarno" name="aadhaarno" required>
+            </div>
+            <div class="form-group">
+                <label for="mobilenumber">Mobile Number</label>
+                <input type="tel" id="mobilenumber" name="mobilenumber" required>
+            </div>
+            <div class="form-group">
+                <label for="emailid">Email Id</label>
+                <input type="email" id="emailid" name="emailid" required>
+            </div>
+            <div class="form-group-gender">
+                <label><b>Gender</b></label>
+                <div class="gender">
+                    <div class="male">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="female">
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </section>
+
+    <!--=============== Footer ===============-->
+  
+    <div class="footer">
+        <div class="f">
+           
+        <h1>Good Children High School</h1>
+        <p>Adarsh Colony, Maruthi Nagar,</p>
+        <p>Anantapur, Andhra Pradesh, India</p>
+        <p>515002</p>
+        <p>Phone No. - 0000-888-222</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tumblr"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="#"><b>Terms & Conditions</b></a>
+            <a href="#"><b>Calendar</b></a>
+            <a href="#"><b>Location</b></a>
+            <a href="#"><b>Privacy Policy</b></a>
+        </div>
+        
+        </div>
+     </div>
+     <div class="footer-bottom">
+        <span><h2 style="font-family:'Pacifico';font-weight: 300;font-size: 35px;">Striving for Excellence</h2></span>
+        <div class="powered-by">
+           <p>Powered by <a href="#"><b>Starktech</b></a></p>
+        </div>
+    </div>
+  </div>
+  
+  
+</body>
+</html>

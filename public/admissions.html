@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admissions</h1>
+    <table id="admissionsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Class</th>
+                <th>DOB</th>
+                <th>Father's Name</th>
+                <th>Age</th>
+                <th>Mother's Name</th>
+                <th>Aadhaar No</th>
+                <th>Mobile Number</th>
+                <th>Email ID</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const response = await fetch("/api/admissions");
+            const admissions = await response.json();
+            const tbody = document.getElementById("admissionsTable").querySelector("tbody");
+            admissions.forEach(admission => {
+                const row = document.createElement("tr");
+                for (const key in admission) {
+                    const cell = document.createElement("td");
+                    cell.textContent = admission[key];
+                    row.appendChild(cell);
+                }
+                tbody.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>

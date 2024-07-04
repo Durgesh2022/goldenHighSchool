@@ -1,0 +1,337 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(38, 92%, 58%);
+  --first-color-light: rgb(17, 199, 245);
+  --first-color-alt: rgb(10, 65, 125);
+  --second-color: white;
+  --dark-color: hsl(212, 40%, 12%);
+  --white-color: hsl(212, 4%, 95%);
+  --body-color: white;
+  --container-color: rgb(66, 66, 244);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Bai Jamjuree", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--white-color);
+}
+
+
+
+.management {
+         margin-top: 0px;
+          display: block;
+          backdrop-filter: 20px;
+          text-align: center;
+          
+            background-attachment: fixed; 
+            background-size: 500px 500px; 
+            background-repeat: no-repeat;
+            background-color: white;
+            background-position: center; /* Center the background image */
+             align-items: center;
+            
+   
+}
+.management h1 {
+  font-weight: 200;
+  color: blue;
+  font-size: 8em;
+  margin: 10px 0;
+  font-family: "Copperplate", Fantasy;
+  height: 400px;
+  text-align: center;
+  text-shadow: 0 16px 24px rgba(16, 16, 16, 0.8);
+}
+
+.ml142 .text-wrapper2 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml142 .letters2 {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml142 .line2 {
+  opacity: 1; /* Make sure the line is visible */
+  position: absolute;
+  left: -25%;
+  
+  transform: translateX(-50%);
+  height: 4px; /* Increase height */
+  width: 110%; /* Make it wider than the letters */
+   /* Change color to contrast with the background */
+  bottom: -10px; /* Adjust position if needed */
+  display: inline-block;
+  text-align: center;
+}
+
+
+.faculty {
+  margin-top: 0px;
+   display: block;
+   backdrop-filter: 20px;
+   text-align: center;
+     background-attachment: fixed; 
+     background-size: 600px 600px; 
+     background-repeat: no-repeat;
+     background-color: white;
+     background-position: center; /* Center the background image */
+      align-items: center;
+     
+
+}
+.ml143{
+  font-weight: 200;
+color: green;
+font-size: 8em;
+margin: 10px 0;
+font-family: "Copperplate", Fantasy;
+text-shadow: 0 16px 24px rgba(16, 16, 16, 0.8);
+}
+.ml143 .text-wrapper3 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml143 .line3 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml143 .letter3 {
+  display: inline-block;
+  line-height: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.mcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  
+  
+}
+
+.card__container {
+  padding-block: 5rem;
+   
+}
+
+.card__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  
+}
+
+.card__article {
+ 
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.6);
+}
+
+.card__image {
+  position: relative;
+  background-color: var(--first-color-light);
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+.card__image2 {
+  position: relative;
+  background-color: #81e8bd;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__data {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.card__data2 {
+  background-color: #0fe78d;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card__img {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  background-color: var(--first-color-alt);
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(45px);
+}
+
+.card__name {
+  font-size: var(--h2-font-size);
+  color: var(--second-color);
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+
+
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: var(--dark-color);
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 480px) {
+
+  .management h1{
+    font-size: 2.8em;
+  }
+  .management{
+    background-size: 250px 250px; 
+  }
+  .faculty h1{
+    font-size: 2.8em;
+  }
+  .mcontainer{
+    height: 60vh;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    font-size: 2rem; /* Adjust size as needed */
+  }
+ 
+}
+@media screen and (max-width: 360px){
+  .management h1{
+    font-size: 3em;
+    height: 150px;
+  }
+  .faculty h1{
+    font-size: 2.7em;
+   
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1120px;
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+}
+
+
+
+
+

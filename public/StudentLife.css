@@ -1,0 +1,799 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  
+  z-index: 1;
+}
+
+.logo-img {
+  margin-right: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+.school-name {
+  font-size: 3.2em;
+  color: #090808;
+  margin: 0;
+ 
+}
+.wrapper {
+ width: 50%;
+ 
+  position: relative;
+  z-index: 1;
+}
+.wrapper .menu-btn {
+  position: absolute;
+  right: 10px;
+  bottom: -25px;
+  background: #018ffc;
+  color: black;
+  height: 45px;
+  width: 45px;
+  z-index: 9999;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+#btn:checked ~ .menu-btn {
+  top: 10px;
+  right: 37px;
+  background: #12cdd4;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.wrapper .menu-btn i {
+  position: absolute;
+  font-size: 23px;
+  transition: all 0.3s ease;
+}
+.wrapper .menu-btn i.fa-times {
+  opacity: 0;
+}
+#btn:checked ~ .menu-btn i.fa-times {
+  opacity: 1;
+  transform: rotate(-180deg);
+}
+#btn:checked ~ .menu-btn i.fa-bars {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+#sidebar {
+  position: fixed;
+  background: #12cdd4;
+  height: 500px;
+  width: 670px;
+  overflow: hidden;
+  right: -670px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+#btn:checked ~ #sidebar {
+  right: 0;
+}
+#sidebar .logo {
+  line-height: 65px;
+  
+  background: #018ffc;
+  padding: 10px;
+}
+#sidebar .logo img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  left: 30px;
+  top: 20px;
+}
+#sidebar .list-items {
+  list-style: none;
+}
+#sidebar .left-section{
+  width: 70%;
+ 
+  float: left;
+  height: 100%;
+}
+#sidebar .right-section {
+  width: 30%;
+  
+  float: left;
+  height: 100%;
+}
+#sidebar .left-section .list-items li {
+  padding-left: 10px;
+  background: #018ffc;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #018ffc;
+  transition: all 0.3s ease;
+}
+#sidebar .right-section .list-items li {
+  padding-left: 40px;
+  background: #12cdd4;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #12cdd4;
+  transition: all 0.3s ease;
+}
+#sidebar .list-items li:hover {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0px 10px 3px #222;
+}
+#sidebar .left-section .list-items li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 24px; /* Increase the font size */
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding: 15px 20px; /* Adjust padding if necessary */
+
+}
+
+#sidebar .right-section .list-items {
+  position: absolute; /* Positioned absolute */
+  bottom: 0; /* Aligned to the bottom */
+  width: 100%; /* Full width */
+}
+
+#sidebar .right-section .list-items li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+#sidebar .list-items li a i {
+  margin-right: 20px;
+}
+
+
+
+
+
+.slideshow {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  height: 600px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.item {
+  flex: 1 0 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+.button {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+
+
+.slideshow1 {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.container1 {
+  width: 100%;
+  height: 600px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.slide1 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.item1 {
+  flex: 1 0 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 60px solid #2d9bf0;
+}
+
+iframe{
+  width:100%;
+   height:500px;
+}
+
+
+
+
+
+
+
+
+
+.Discription1{
+
+  margin: 20px 0;
+  background: white;
+  
+  height: 1800px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  align-items: center;
+
+}
+
+
+
+
+
+
+.vission1 {
+  position: relative; /* Ensure the parent is positioned */
+ /* Just for visualization */
+}
+
+.discription2 {
+  position: absolute;
+  left: 210px;
+  top: 10px; /* Adjust as needed */
+  background-color: #12CDD4;
+  width: 400px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 50px;
+  color: black;
+  margin: 0;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+}
+
+.discription3 {
+  position: absolute; /* Add this line to enable positioning */
+  top: 220px; /* Adjust this value to position below the h1 element */
+  left: 60px; /* Adjust this value to position to the left */
+  background-color: #12CDD4;
+  width: 350px;
+  height:200px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 0; /* Remove margin as we are using positioning */
+  font-size: 2em;
+  color: black;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+  text-align: center;
+}
+.discription3 img{
+border-radius:8rem;
+position: relative;
+left: 6rem;
+height:5.5rem;
+}
+.disc3 {
+  position: absolute;
+  top: 120px; /* Adjust this value to position below the h1 element */
+  right: 0px;
+  color: red;
+  font-size: 2.5em;
+  font-family: 'Pacifico', cursive;
+  width: 900px;
+  text-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+  border: 1px solid white;
+}
+
+
+.center1 img{
+  position: relative; /* Positioning relative to the parent */
+  top: 900px; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+  border: 1px solid white;
+  background-color:#d101f4 ;
+  width: 420px;
+  height: 370px;
+  border-radius: 20px;
+  padding: 0px;
+  margin: 0;
+  color: black;
+  font-family: 'Pacifico', cursive;
+  font-size: 3.2em;
+  text-align: center;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+}
+
+.discription4 {
+  position: absolute;
+  top: 450px; /* Adjust this value to position below the h1 element */
+  right: 60px;
+  background-color: #12CDD4;
+  width: 400px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 50px;
+  color: black;
+  margin: 0;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+}
+.discription5 {
+  position: absolute; /* Add this line to enable positioning */
+  right: 210px;
+  top: 300px; /* Adjust this value to position to the left */
+  background-color: #12CDD4;
+  width: 400px;
+  height:200px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 0; /* Remove margin as we are using positioning */
+  font-size: 2.30em;
+  color: black;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+  text-align: center;
+}
+.discription5 img{
+border-radius:8rem;
+position: relative;
+left: 4rem;
+height:5.5rem;
+}
+
+.disc4 {
+  position: absolute;
+  top: 550px; /* Adjust this value to position below the h1 element */
+  left: 400px;
+  color: red;
+  font-size: 2.5em;
+  font-family: 'Pacifico', cursive;
+  width: 900px;
+  text-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+  border: 1px solid white;
+}
+
+
+.discription6 {
+  position: absolute;
+  top: 1000px; /* Adjust this value to position below the h1 element */
+  left: 60px; /* Adjust as needed */
+  background-color: #12CDD4;
+  width: 400px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 50px;
+  color: black;
+  margin: 0;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+}
+.discription7 {
+  position: absolute; /* Add this line to enable positioning */
+  left: 220px;
+  top: 1200px; /* Adjust this value to position to the left */
+  background-color: #12CDD4;
+  width: 350px;
+  height:200px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 0; /* Remove margin as we are using positioning */
+  font-size: 2.25em;
+  color: black;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+  text-align: center;
+}
+.discription7 img{
+border-radius:8rem;
+position: relative;
+left: 6rem;
+height:4.5rem;
+}
+.disc5 {
+  position: absolute;
+  top: 1150px; /* Adjust this value to position below the h1 element */
+  right: 50px;
+  color: red;
+  font-size: 2.5em;
+  font-family: 'Pacifico', cursive;
+  width: 900px;
+  text-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+  border: 1px solid white;
+}
+
+.discription8 {
+  position: absolute;
+  right: 210px;
+  top: 1400px; /* Adjust as needed */
+  background-color: #12CDD4;
+  width: 400px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 50px;
+  color: black;
+  margin: 0;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+}
+.discription9 {
+  position: absolute; /* Add this line to enable positioning */
+  top: 1250px; /* Adjust this value to position below the h1 element */
+  right: 60px; /* Adjust this value to position to the left */
+  background-color: #12CDD4;
+  width: 350px;
+  height:200px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 0; /* Remove margin as we are using positioning */
+  font-size: 2.1em;
+  color: black;
+  text-align: center;
+  box-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+}
+
+.discription9 img{
+border-radius:8rem;
+position: relative;
+left: 3rem;
+height:4.5rem;
+}
+.disc6 {
+  position: absolute;
+  top: 1520px; /* Adjust this value to position below the h1 element */
+  left: 150px;
+  color: red;
+  font-size: 2.5em;
+  font-family: 'Pacifico', cursive;
+  width: 900px;
+  text-shadow: 0 16px 24px rgba(16, 16, 16, 0.7);
+  border: 1px solid white;
+}
+
+
+
+
+.bg2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('backgroundImage.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #71b3e5; /* Blue overlay with 50% opacity */
+  opacity: 50%;
+  backdrop-filter: blur(10px); /* Adjust the blur level as needed */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  
+}
+
+.content h1 {
+  margin-bottom: 20px;
+  font-size: 6rem;
+  color: #d52301;
+  font-family: Dancing Script;
+  
+}
+
+.content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #2a4f07;
+  font-size: Raleway;
+}
+
+
+
+
+
+
+.footer1 {
+  text-align: center;
+  padding: 0px;
+  position: relative;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  z-index: 3;
+ 
+  
+}
+
+.footer1 img {
+  display: block;
+  margin: 0 auto;
+  width: 100px; /* Adjust size as per your requirement */
+  top: 680px;
+  position: relative;
+  z-index: 4; /* Ensure image is above background */
+  border-radius: 30px;
+}
+
+
+
+.footer {
+  
+  background-color: #1E90FF; /* DodgerBlue background */
+  color: #6A0DAD; /* Purple text */
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 0; /* Ensure footer is behind other content */
+  clear: both; /* Clear floats */
+
+}
+.f{
+
+  background-color: #1E90FF; /* DodgerBlue background */
+  color: #6A0DAD; /* Purple text */
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 0; /* Ensure footer is behind other content */
+  clear: both; /* Clear floats */
+}
+.footer1 {
+  text-align: center;
+  padding: 0px;
+  position: relative;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  height: 100px;
+ 
+  
+}
+
+.f h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+.f p {
+  margin: 5px 0;
+  font-family:Cursive;
+  font-style:italic;
+}
+.social-icons {
+  margin: 20px 0;
+}
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #6A0DAD;
+  font-size: 24px;
+}
+.footer-links {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.footer-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #6A0DAD;
+}
+.footer-links b{
+font-weight:800;
+}
+.footer-bottom {
+  background-color: #6A0DAD; /* Purple background */
+  color: white;
+  padding: 0px;
+  margin-top: 0px;
+  font-size: 16px;
+  
+}
+.footer-bottom span {
+  font-weight: bold;
+}
+.powered-by a {
+  color: white;
+  text-decoration: none;
+}
+.powered-by p{
+  font-size: 12px;
+  margin-top: 10px;
+  background-color:#070b56 ; /* Purple background */
+  color: white;
+  padding: 0px;
+  display: inline-block;
+  border-radius:3px;
+}
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+@media only screen and (max-width: 1023px) {
+  
+   
+  .Discription1{
+    height: 1400px;
+  }
+  .discription2 {
+    width: 250px; /* Adjusted width to fit smaller screens */
+    font-size: 14px; /* Adjusted font size */
+    padding: 20px; /* Adjusted padding */
+    left: 90px; /* Centered horizontally */
+    top: 30px;
+  }
+  
+  .discription3 {
+    width: 250px; /* Adjusted width */
+    height: 120px; /* Adjusted height */
+    font-size: 1.5em;
+    padding: 20px; /* Adjusted padding */
+    left: 10px; /* Centered horizontally */
+    top: 210px;
+    
+  }
+  .discription3 img{
+    left: 5rem;
+    height: 3rem;
+  }
+  .disc3{
+    top: 130px;
+    font-size: 2em;
+    left: 100px;
+    
+  }
+  .discription4{
+    top: 400px;
+    width: 250px; /* Adjusted width to fit smaller screens */
+    font-size: 14px; /* Adjusted font size */
+    padding: 20px; /* Adjusted padding */
+    right: 10px;
+  }
+  .discription5{
+    width: 250px;
+    height: 120px;
+    padding: 10px;
+    font-size: 1.5em;
+    right: 90px;
+  }
+  .discription5 img{
+    height: 3rem;
+   
+  }
+  .disc4{
+    left: 200px;
+    font-size: 2em;
+    top: 450px;
+    
+  }
+  .center1 img{
+    top: 700px;
+    width: 320px;
+    height: 270px;
+  }
+  .discription6{
+    width: 250px; /* Adjusted width to fit smaller screens */
+    font-size: 14px; /* Adjusted font size */
+    padding: 20px; /* Adjusted padding */
+    left: 10px;
+    top:780px;
+  }
+  .discription7{
+    width: 250px; /* Adjusted width */
+    height: 120px; /* Adjusted height */
+    font-size: 1.5em;
+    padding: 20px;
+    left: 90px;
+    top: 970px;
+  }
+  .discription7 img{
+    height: 3rem;
+  }
+  .disc5{
+    font-size: 2em;
+    left: 260px;
+    top: 890px;
+  }
+  .discription8{
+    width: 250px; /* Adjusted width to fit smaller screens */
+    font-size: 14px; /* Adjusted font size */
+    padding: 20px;
+    right: 90px;
+    top: 1100px;
+  }
+  .discription9{
+    width: 250px; /* Adjusted width */
+    height: 120px; /* Adjusted height */
+    font-size: 1.5em;
+    padding: 10px;
+    right: 10px;
+    top: 1000px;
+  }
+  .discription9 img{
+    height: 3rem;
+  }
+  .disc6{
+    font-size: 2em;
+    top: 1200px;
+    left: 70px;
+  }
+
+  .bg2 {
+    height: 400px; /* Adjusted height of background section */
+  }
+  
+  .footer1 img {
+    width: 80px; /* Adjusted image width */
+    top: 440px;
+  }
+  
+  .disc3 {
+    font-size: 1.8em; /* Adjusted font size */
+    width: 100%; /* Adjusted width */
+    text-align: center; /* Centered text */
+  }
+}
