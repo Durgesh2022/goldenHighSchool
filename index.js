@@ -66,7 +66,7 @@ app.post("/submit", async (req, res) => {
 
   try {
     const result = await db.query(
-      "INSERT INTO admission3 (firstname, lastname, class, dob, fathername, age, mothername, aadhaarno, mobilenumber, emailid, gender) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *",
+      "INSERT INTO admission (firstname, lastname, class, dob, fathername, age, mothername, aadhaarno, mobilenumber, emailid, gender) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *",
       [firstname, lastname, studentClass, dob, fathername, age, mothername, aadhaarno, mobilenumber, emailid, gender]
     );
     const newAdmission = result.rows[0];
